@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import CardTable from "./components/CardTable";
 import FirebaseMessaging from "./config/initFirebase.js";
-import { StoreProvider, useStore } from "store/store";
+// import { StoreProvider, useStore } from "store/store";
 
 import "./index.scss";
 
@@ -11,10 +11,10 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const App = () => {
-  const { count, increment } = useStore();
+  // const { count, increment } = useStore();
   return (
     <div className="mt-10 text-3xl mx-auto max-w-6xl">
-       <div>Test Redux</div>
+      {/* <div>Test Redux</div>
       <div>Count: {count}</div>
       <div>
         <button
@@ -23,15 +23,15 @@ const App = () => {
         >
           Add To Cart
         </button>
-      </div>
+      </div> */}
       <FirebaseMessaging />
       <CardTable />
     </div>
   );
 };
 ReactDOM.render(
-  <StoreProvider>
-    <App />
-  </StoreProvider>,
+  // <StoreProvider>
+  <App />,
+  // </StoreProvider>
   document.getElementById("app")
 );
