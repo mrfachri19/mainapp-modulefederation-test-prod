@@ -3,11 +3,14 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const path = require("path");
 
 const deps = require("./package.json").dependencies;
-module.exports = {
+module.exports = (_, argv) => ({
   entry: "./src/index.js",
   output: {
     // path: path.join(__dirname, "build"), // change this
-    publicPath: "http://localhost:3005/",
+    publicPath:
+      argv.mode === "development"
+        ? "http://localhost:3005/"
+        : "https://mainapp-modulefederation-test-prod-ljei421b0-mrfachri19.vercel.app/",
     // filename: "bundle.js",
   },
 
@@ -69,4 +72,4 @@ module.exports = {
       template: path.resolve("./src/index.html"),
     }),
   ],
-};
+});
