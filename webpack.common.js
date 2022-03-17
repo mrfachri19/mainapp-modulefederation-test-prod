@@ -10,7 +10,7 @@ module.exports = (_, argv) => ({
     publicPath:
       argv.mode === "development"
         ? "http://localhost:3005/"
-        : "https://mainapp-modulefederation-test-prod-ljei421b0-mrfachri19.vercel.app/",
+        : "https://mainapp-modulefederation-test-prod.vercel.app/",
     // filename: "bundle.js",
   },
 
