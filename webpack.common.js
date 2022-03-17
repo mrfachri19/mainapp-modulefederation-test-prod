@@ -6,9 +6,9 @@ const deps = require("./package.json").dependencies;
 module.exports = {
   entry: "./src/index.js",
   output: {
-    path: path.join(__dirname, "build"), // change this
+    // path: path.join(__dirname, "build"), // change this
     publicPath: "http://localhost:3005/",
-    filename: "bundle.js",
+    // filename: "bundle.js",
   },
 
   resolve: {
