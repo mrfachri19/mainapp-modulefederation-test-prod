@@ -8,9 +8,9 @@ module.exports = (_, argv) => ({
   output: {
     // path: path.join(__dirname, "build"), // change this
     publicPath:
-      argv.mode === "development"
-        ? "http://localhost:3005/"
-        : "https://mainapp-modulefederation-test-prod.vercel.app/",
+      argv.mode === "production"
+        ? "https://mainapp-modulefederation-test-prod.vercel.app/"
+        : "http://localhost:3005/",
     // filename: "bundle.js",
   },
 
