@@ -3,11 +3,10 @@ const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPl
 const path = require("path");
 
 const deps = require("./package.json").dependencies;
-module.exports = (_, argv) => ({
+module.exports = {
   entry: "./src/index.js",
   output: {
     // path: path.join(__dirname, "build"), // change this
-
     publicPath: "http://localhost:3005/",
     // filename: "bundle.js",
   },
@@ -70,4 +69,4 @@ module.exports = (_, argv) => ({
       template: path.resolve("./src/index.html"),
     }),
   ],
-});
+};
