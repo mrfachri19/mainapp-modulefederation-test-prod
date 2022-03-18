@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import CardTable from "./components/CardTable";
 import FirebaseMessaging from "./config/initFirebase.js";
 // import { StoreProvider, useStore } from "store/store";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 import "./index.scss";
 
@@ -35,3 +36,4 @@ ReactDOM.render(
   // </StoreProvider>
   document.getElementById("app")
 );
+serviceWorkerRegistration.register();
